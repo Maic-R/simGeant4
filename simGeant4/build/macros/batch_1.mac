@@ -1,0 +1,9 @@
+# This macro is used to properly set up the interactive session (GUI)
+
+/run/initialize
+
+/gun/particle ion
+/gun/ion 38 90
+/gun/energy 0 MeV
+
+/run/beamOn 4000000

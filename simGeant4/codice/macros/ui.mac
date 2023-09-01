@@ -1,0 +1,20 @@
+# This macro is used to properly set up the interactive session (GUI)
+
+/run/initialize
+
+/geometry/test/run
+/vis/geometry/list
+
+
+/vis/open OGLSQt
+/vis/viewer/set/background 0.486 0.490 0.471 0.902
+/vis/viewer/set/style surface
+/vis/drawVolume
+/vis/scene/add/trajectories smooth
+/vis/filtering/trajectories/create/particleFilter
+/vis/filtering/trajectories/particleFilter-0/add e-
+
+/vis/scene/endOfEventAction accumulate 1000
+
+#/control/execute macros/batch_1.mac
+
